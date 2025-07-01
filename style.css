@@ -1,0 +1,74 @@
+/* Bình luận cho phần tử li */
+nav ul li {
+    /* Đây là kiểu dáng cho từng phần tử li trong nav */
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Thay đổi nav dùng inline-block và rộng 80% */
+nav {
+    display: inline-block;
+    width: 80%;
+    background-color: #eee;
+    padding: 10px;
+}
+
+/* Bộ chọn hậu duệ: ảnh trong nav có chiều rộng khoảng 10% */
+nav img {
+    width: 10%;
+    vertical-align: middle;
+}
+
+/* Lớp grid sử dụng CSS grid hai cột mỗi cột ~40% */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center; /* Căn giữa toàn bộ grid */
+    align-items: center;     /* Căn giữa các phần tử theo chiều dọc */
+    row-gap: 20px;           /* Khoảng cách hàng */
+    margin-top: 20px;
+}
+
+/* Chỉ tạo kiểu cho ảnh trong lớp grid: rộng 100% */
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+/* Lớp flex sử dụng flexbox */
+.flex {
+    display: flex;
+    flex-wrap: wrap;               /* Cho phép xuống dòng nếu thiếu chỗ */
+    justify-content: space-around; /* Khoảng cách đều giữa các phần tử */
+    margin-top: 20px;
+}
+
+/* Ảnh trong flex có thể tùy chỉnh kích thước */
+.flex img {
+    width: 150px;
+    height: auto;
+    margin: 5px;
+}
+
+/* Kiểu cho link "Chuyển đến Nội dung chính" */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: yellow;
+    padding: 5px 10px;
+    z-index: 1000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Khi không focus sẽ ẩn link này */
+.skip-link:not(:focus) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
